@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width calculation */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px; /* Added margin-top for spacing from elements above */
+    margin-right: 10px; /* For spacing if buttons are next to each other */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#transferForm button[type="submit"] {
+    background-color: #28a745; /* Green for submit */
+    display: block; /* Make submit button take full width */
+    width: 100%;
+    margin-top: 15px; /* More space above submit button */
+}
+
+#transferForm button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+#selectPayeeButton {
+    background-color: #6c757d; /* A different color for secondary action */
+    margin-bottom: 15px; /* Space below this button */
+}
+
+#selectPayeeButton:hover {
+    background-color: #545b62;
+}
+
+#capitalizedAmountDisplay,
+#transactionFeeDisplay {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #333;
+    min-height: 1.5em; /* Ensure it has some height even when empty */
+}
+
+#transactionFeeDisplay {
+    font-size: 0.85em;
+    color: #495057;
+}
+
+/* Ensure div containers for form elements don't add extra space if not needed */
+form > div {
+    margin-bottom: 10px; /* Default spacing for form groups */
+}
+
+/* Reduce margin for display divs as they have internal padding */
+#capitalizedAmountDisplay + div, /* The div containing payeeName */
+#transactionFeeDisplay + button[type="submit"] { /* The submit button */
+    margin-top: 10px;
+}
+
+/* Specific spacing for datalist-associated input */
+input[list="recentPurposes"] {
+    margin-bottom: 5px; /* Reduce space if fee is shown right after */
+}

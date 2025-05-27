@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Page</title>
+    <!-- Link to the external stylesheet for page presentation -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for the transfer form -->
+    <div class="container">
+        <h1>Transfer Page</h1> <!-- Main title of the page -->
+        
+        <!-- Transfer Form -->
+        <form id="transferForm">
+            
+            <!-- Payer Information Section -->
+            <div>
+                <label for="payerAccount">Payer Account</label>
+            <select id="payerAccount"></select>
+        </div>
+        
+        <!-- Payment Details Section -->
+        <div>
+            <label for="paymentAmount">Payment Amount</label>
+            <input type="text" id="paymentAmount" placeholder="Enter amount"> <!-- Placeholder for amount input -->
+        </div>
+        <!-- Display area for the amount in Chinese capital letters -->
+        <div id="capitalizedAmountDisplay"></div>
+        
+        <!-- Payee Information Section -->
+        <div>
+            <label for="payeeName">Payee Name</label>
+            <input type="text" id="payeeName" placeholder="Enter payee name">
+        </div>
+        <div>
+            <label for="payeeAccount">Payee Account</label>
+            <input type="text" id="payeeAccount" placeholder="Enter payee account number">
+        </div>
+        <!-- Button to simulate selecting a payee from a predefined list -->
+        <button id="selectPayeeButton" type="button">Select from Payee List</button> <!-- Changed to type="button" to prevent form submission -->
+        
+        <!-- Payment Purpose Section -->
+        <div>
+            <label for="paymentPurpose">Payment Purpose</label>
+            <input type="text" id="paymentPurpose" list="recentPurposes" placeholder="Enter purpose of payment">
+            <!-- Datalist for suggesting common payment purposes -->
+            <datalist id="recentPurposes"></datalist>
+        </div>
+        
+        <!-- Transaction Fee Display -->
+        <!-- Display area for the calculated transaction fee -->
+        <div id="transactionFeeDisplay"></div>
+        
+        <!-- Submit Button -->
+        <button type="submit">Submit Transfer</button>
+    </form>
+    </div>
+    
+    <!-- Link to the external JavaScript file for page functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
